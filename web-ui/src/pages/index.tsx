@@ -1,15 +1,18 @@
-export default function Home() {
+import React from 'react'
+import Head from 'next/head'
+
+const Home: React.FC = () => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        width: '100vw',
-        height: '100vh',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <h1>Home</h1>
+    <div>
+      <Head>
+        <title>Create Next App</title>
+      </Head>
+
+      <main>
+        <h1>L.S.D.</h1>
+      </main>
     </div>
-  );
+  )
 }
+
+export default Home
