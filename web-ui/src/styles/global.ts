@@ -16,6 +16,5 @@ export default createGlobalStyle`
 
   a {
     text-decoration: none;
-    color: ${props => props.theme.colors.primary};
   }
 `
