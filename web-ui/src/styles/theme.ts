@@ -1,8 +1,8 @@
 const defaultTheme = {
   colors: {
-    background: '#fff',
-    text: '#111',
-    primary: '#0070f3'
+    background: 'rgb(30, 28, 33)',
+    section: 'rgb(51, 49, 56)',
+    text: '#fff'
   }
 }
 

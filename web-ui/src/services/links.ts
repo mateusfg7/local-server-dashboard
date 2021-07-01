@@ -2,12 +2,20 @@ const links = [
   {
     service: 'portainer',
     title: 'Portainer',
-    url: 'http://127.0.0.1:9000'
+    url: 'http://127.0.0.1:9000',
+    mainColor: '#13BEF9'
   },
   {
     service: 'emby',
     title: 'Emby',
-    url: 'http://127.0.0.1:8097'
+    url: 'http://127.0.0.1:8097',
+    mainColor: '#52B54B'
+  },
+  {
+    service: 'nextcloud',
+    title: "Felipe's Cloud",
+    url: 'http://127.0.0.1:8080',
+    mainColor: '#473730'
   }
 ]
 
