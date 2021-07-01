@@ -1,15 +1,13 @@
-FROM node:latest
-
-WORKDIR /usr/src/app/web-ui
-
-COPY package*.json ./
-
-RUN yarn install
-
-COPY * ./
-
-RUN yarn build
+FROM node:12
+WORKDIR /usr/src/app
 
 EXPOSE 3000
 
-CMD "yarn start"
+COPY . ./
+
+# building the app
+RUN npm i
+RUN npm run build
+
+# Running the app
+CMD [ "npm", "start" ]
