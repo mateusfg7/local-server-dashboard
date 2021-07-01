@@ -29,7 +29,9 @@ const Home: React.FC = () => {
         <Content>
           <div className="cards">
             {links.map(service => (
-              <LinkCard url={service.url} background={service.mainColor}>
+              <LinkCard
+                key={service.service}
+                url={service.url} background={service.mainColor}>
                 {service.title}
               </LinkCard>
             ))}
