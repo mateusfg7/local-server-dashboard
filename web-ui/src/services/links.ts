@@ -16,6 +16,13 @@ const links = [
     title: "Felipe's Cloud",
     url: 'http://127.0.0.1:8080',
     mainColor: '#473730'
+  },
+  {
+    service: 'freezer',
+    title: 'Freezer',
+    url: 'http://127.0.0.1:10069',
+    mainColor: '#403994'
+
   }
 ]
 
