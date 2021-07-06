@@ -48,8 +48,6 @@ const Home: React.FC<Props> = ({ weatherData }) => {
   function handleSearch(e: React.FormEvent) {
     e.preventDefault()
 
-    alert(search)
-
     window.location.replace(`https://anon.sx/search?q=${search}`)
   }
 
