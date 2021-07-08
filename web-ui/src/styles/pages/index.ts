@@ -21,7 +21,7 @@ export const Main = styled.main`
 
   border-radius: 10px;
 
-  box-shadow: 0 0 40px black;
+  box-shadow: 0 0 100px black;
 `
 
 export const Clock = styled.section`
@@ -29,8 +29,6 @@ export const Clock = styled.section`
 
   font-size: 1.5rem;
   border-radius: 10px 0 0 10px;
-
-  background: url(${props => props.theme.assets.backgroundImage}) no-repeat;
 
   div {
     display: flex;
