@@ -1,18 +1,20 @@
 import styled from 'styled-components'
 
+interface ContainerProps {
+  backgroundUrl: string
+}
 interface ContentProps {
   color: string
 }
 
-export const Container = styled.main`
+export const Container = styled.main<ContainerProps>`
   display: flex;
   justify-content: center;
   align-items: center;
 
   width: 100vw;
   height: 100vh;
-  background: url(${props => props.theme.assets.backgroundImage}) no-repeat
-    center;
+  background: url(${props => props.backgroundUrl}) no-repeat center;
   background-size: cover;
 `
 
@@ -21,7 +23,8 @@ export const Main = styled.main`
 
   border-radius: 10px;
 
-  box-shadow: 0 0 100px black;
+  backdrop-filter: blur(1px) brightness(0.7) saturate(50%);
+  box-shadow: 0 0 80px black;
 `
 
 export const Clock = styled.section`

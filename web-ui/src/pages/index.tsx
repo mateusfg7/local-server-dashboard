@@ -7,6 +7,7 @@ import {
   getCurrentWeatherData,
   CurrentWeatherData
 } from '../utils/getWeatherData'
+import getCurrentBackgroundUrl from '../utils/getCurrentBackgroundUrl'
 import hostList from '../services/hosts.json'
 
 import { Container, Main, Clock, Content, Host } from '../styles/pages/index'
@@ -19,10 +20,14 @@ interface Props {
 const Home: React.FC<Props> = ({ currentWeatherData }) => {
   const [currentDate, setCurrentDate] = useState(new Date())
   const [search, setSearch] = useState<string>()
+  const [backgroundUrl, setBackgroundUrl] = useState(
+    getCurrentBackgroundUrl(currentDate, currentWeatherData)
+  )
 
   useEffect(() => {
     setInterval(() => {
       setCurrentDate(new Date())
+      setBackgroundUrl(getCurrentBackgroundUrl(currentDate, currentWeatherData))
     }, 500)
   }, [])
 
@@ -38,7 +43,7 @@ const Home: React.FC<Props> = ({ currentWeatherData }) => {
         <title>L.S.D.</title>
       </Head>
 
-      <Container>
+      <Container backgroundUrl={backgroundUrl}>
         <Main>
           <Clock>
             <div className="hour">
