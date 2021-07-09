@@ -19,7 +19,7 @@ export interface CurrentWeatherData {
     condition: {
       text: string
       icon: string
-      humidity: number
+      code: number
     }
   }
 }
